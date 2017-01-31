@@ -23,6 +23,38 @@ The source code for IMS/DC system definition and MFS maps needs to be delivered 
 |IMS/DC Transaction definition (IMS system definition)  | tra | M | This file lists one or more APPLCTN macros combined with one or more TRANSACT macros. It defines the scheduling and resource requirements for an application program. See IBM documentation on how to obtain this file. This seems to be "stage 1 of IMS system definition" output. | 
 | IMS MFS maps definition | mfs | O | See IBM documentation on how to obtain these files (1 file per MFS map). 2 alternative for the source code delivery, when MFS maps are managed in a PDS : (1) Use IEBPTPCH utility as documented at Partitioned Data Set (PDS), and add .mfs extension to all files, Deliver in DMT as Folder on your local file system. (2) Use the Mainframe vendor specific extractor to split a PDS dump (use the Cobol program entry for instance) and rename the .cbl extensions to .mfs. | 
 
+TRA file sample 1 : 
+```
+         APPLCTN PSB=ANT001,PGMTYPE=TP,SCHDTYP=PARALLEL                 00001400
+         TRANSACT CODE=ANTPSR,MSGTYPE=(MULTSEG,RESPONSE,4),            *00001500
+               PARLIM=0,SEGNO=400,                                     *00001600
+               MODE=SNGL,PROCLIM=(03,01)                                00001700
+...
+         APPLCTN PSB=ANT100,PGMTYPE=BATCH                               00001800
+         TRANSACT CODE=ANT100,MSGTYPE=(MULTSEG,NONRESPONSE,6),         *00001900
+               MODE=SNGL,PRTY=(0,0),PROCLIM=(03,01)                     00002000
+
+```
+
+TRA file sample 2 : 
+```
+  APPLCTN PSB=ABPG625,PGMTYPE=(TP),FPATH=NO,SCHDTYP=PARALLEL
+            TRANSACT CODE=625AB,                                       +
+               PRTY=(1,1,65535),                                       +
+               MSGTYPE=(SNGLSEG,RESPONSE,1),PROCLIM=(5,2),             +
+               PARLIM=3,SCHD=1,INQUIRY=(NO,RECOVER),MAXRGN=2,          +
+               MODE=SNGL,EDIT=(UC),FPATH=NO,SEGNO=1000,                +
+               DCLWA=YES,AOI=NO  
+...
+ APPLCTN PSB=AGPGA11,PGMTYPE=(BATCH),FPATH=NO,                 +
+               SCHDTYP=PARALLEL
+...
+ APPLCTN GPSB=ABLK406,LANG=ASSEM,PGMTYPE=(BATCH),FPATH=NO,     +
+               SCHDTYP=PARALLEL
+ APPLCTN GPSB=AHHSA,LANG=COBOL,PGMTYPE=(TP),FPATH=NO,          +
+               SCHDTYP=PARALLEL
+```
+
 ## Additional type of objects bring by this extension 
 Objects being part of IMS DC Metamodel : IMS Program, IMS Transaction 
 
