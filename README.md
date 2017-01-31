@@ -10,7 +10,7 @@ MFS (Message Format Service), MFS is an IMS feature which lets you use Formatted
 
 ## Roadmap
 This custom package is a field-supported package. It has been used in a limited number of situations.
-
+This package is initially based on UA and reference finders. 
 
 ## Source Code Delivery Instructions
 The source code for IMS/DC system definition and MFS maps needs to be delivered with the following file extensions ((warning) note these extensions do not exist on the zOS system but have to be added either during the file transfer or after they have been transferred on the Windows system) :
@@ -29,18 +29,27 @@ See IBM documentation on how to obtain these files (1 file per MFS map).
 
 ## Additional type of objects bring by this extension 
 Objects being part of IMS DC Metamodel : IMS Program, IMS Transaction 
+
 ![IMSDC](/imsdc.jpg)
 Objects being part of MFS Metamodel : MID, MOD, FMT 
+
 ![MFS](/mfs.jpg) 
 
-## Sample transaction IMSDC end to end graphical view 
+## Cases covered by this extension 
+
+- links from IMS Programs to PSB's
+- links from IMS Program to Cobol Program
+- links from IMS Transactions to IMS Programs
+- links from MFS MID's to IMS Transactions 
+- link between the PSB used in transactional mode and his PCBs.  
+
+## Sample transactions IMSDC end to end graphical view 
 ![Sample transaction IMSDC end to end graphical view](/imsdc_transaction6_PGU_page_Workaround.jpg)
+
+![Sample2 transaction IMSDC end to end graphical view](/imsdc transaction with comments.jpg)
 
 ## TCC configuration
 - in case of no MFS (Transaction alone), then IMSDC Transaction should be set as begin of transaction.
 - in case of IMSDC Transaction + MFS, then MFS is the begin of transaction.
         Ideally, the FMT should be the entry point since it defines the UI.  If not, you might consider to use the MID (Input message, input to... IMS DC)
 	
-	
-	
-
