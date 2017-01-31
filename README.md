@@ -28,6 +28,28 @@ See IBM documentation on how to obtain these files (1 file per MFS map).
 1° Use IEBPTPCH utility as documented at Partitioned Data Set (PDS), and add .mfs extension to all files, Deliver in DMT as Folder on your local file system.
 2° Use the Mainframe vendor specific extractor to split a PDS dump (use the Cobol program entry for instance) and rename the .cbl extensions to .mfs.
 
+ ## Additional type of objects bring by this extension 
  
-![The log file containing the path](/imsdc_transaction6_PGU_page_Workaround.jpg)
+ Objects being part of IMS DC Metamodel : IMS Program, IMS Transaction
+ ![IMSDC](/imsdc.jpg)
+ 
+ Objects being part of MFS Metamodel : MID, MOD, FMT
+ ![MFS](/mfs.jpg)
+ 
+ 
+ ## Sample transaction IMSDC end to end graphical view 
+ 
+![Sample transaction IMSDC end to end graphical view](/imsdc_transaction6_PGU_page_Workaround.jpg)
+
+
+
+## TCC configuration
+
+According to page Function Points and IMS DC transaction : 
+    in case of no MFS (Transaction alone), then IMSDC Transaction should be set as begin of transaction.
+    In case of IMSDC Transaction + MFS, then MFS is the begin of transaction.
+        Ideally, the FMT should be the entry point since it defines the UI.  If not, you might consider to use the MID (Input message, input to... IMS DC)
+	
+	
+	
 
