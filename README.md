@@ -29,3 +29,5 @@ See IBM documentation on how to obtain these files (1 file per MFS map).
 2° Use the Mainframe vendor specific extractor to split a PDS dump (use the Cobol program entry for instance) and rename the .cbl extensions to .mfs.
 
  
+![The log file containing the path](/imsdc_transaction6_PGU_page_Workaround.jpg)
+
