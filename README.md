@@ -39,11 +39,13 @@ Objects being part of MFS Metamodel : MID, MOD, FMT
 
 ## Cases covered by this extension 
 
-- links from IMS Programs to PSB's
-- links from IMS Program to Cobol Program
-- links from IMS Transactions to IMS Programs
-- links from MFS MID's to IMS Transactions 
-- link between the PSB used in transactional mode and his PCBs.  
+The following cases are covered by the extension : 
+- creation of objects for IMS/DC programs / transactions and MFS screens  
+- creation of links from IMS Programs to PSB's
+- creation of links from IMS Program to Cobol Program
+- creation of links from IMS Transactions to IMS Programs
+- creation of links from MFS MID's to IMS Transactions 
+- creation of links between the PSB used in transactional mode and his PCBs.  
 
 ## Sample transactions IMSDC end to end graphical view 
 ![Sample transaction IMSDC end to end graphical view](/imsdc_transaction6_PGU_page_Workaround.jpg)
