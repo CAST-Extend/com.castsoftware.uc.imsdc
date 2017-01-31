@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>com.castsoftware.uc.imsdc</id>
+    <version>1.0.9</version>
+    <title>IMS DC + MFS analyzer</title>
+    <authors>t.guegan@castsoftware.com</authors>
+    <owners>t.guegan@castsoftware.com</owners>
+    <projectUrl>https://github.com/CAST-Extend/com.castsoftware.uc.imsdc</projectUrl>
+    <iconUrl>http://www-01.ibm.com/software/jp/solutions/imsfamily/img/ibm-imsjp-100k-300x200.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This plugin provides a IMS DC analyzer. Take into account IMS/DC Transaction definition (IMS system definition) and IMS MFS maps definition</description>
+    <releaseNotes />
+    <dependencies>
+      <dependency id="CAIP" version="7.3.4" />
+    </dependencies>
+  </metadata>
+</package>
