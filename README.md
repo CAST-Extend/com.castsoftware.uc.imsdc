@@ -1,6 +1,6 @@
 # com.castsoftware.uc.imsdc
 
-# IMS/DC and MFS 
+# IMS/DC and MFS Analyzers 
 
 # Introduction : 
 
@@ -10,7 +10,8 @@ MFS (Message Format Service), MFS is an IMS feature which lets you use Formatted
 
 ## Roadmap
 This custom package is a field-supported package. It has been used in a limited number of situations.
-This package is initially based on UA and reference finders. 
+This package is initially based on UA, reference finders, and KB Update. 
+This package has been tested in CAST 8.0.x 
 
 ## Source Code Delivery Instructions
 The source code for IMS/DC system definition and MFS maps needs to be delivered with the following file extensions ((warning) note these extensions do not exist on the zOS system but have to be added either during the file transfer or after they have been transferred on the Windows system) :
@@ -32,6 +33,7 @@ Objects being part of IMS DC Metamodel : IMS Program, IMS Transaction
 
 ![IMSDC](/imsdc.jpg)
 Objects being part of MFS Metamodel : MID, MOD, FMT 
+
 
 ![MFS](/mfs.jpg) 
 
