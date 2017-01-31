@@ -55,6 +55,26 @@ TRA file sample 2 :
                SCHDTYP=PARALLEL
 ```
 
+MFS file sample : 
+```
+         PRINT NOGEN
+         COPY  MFSEQU
+FSECUR   FMT   DIF/DOF
+         DEV   DEV1
+*****    DEV   TYPE=(3270,2),FEAT=IGNORE
+         DIV   TYPE=INOUT
+         DPAGE CURSOR=((02,66))  <=======
+         DFLD  '* BALTUS TRANSACTION SECURITY *',POS=(02,25),PROH
+         DFLD  'SYS:',POS=(02,61),PRO
+ISYST    DFLD  POS=(02,66),LTH=1,MODA
+         DFLD  'KON:',POS=(02,68),PRO
+IKONS    DFLD  POS=(02,73),LTH=1,MODA
+         DFLD  'CREATION DATE:',POS=(04,04),PRO
+CRDATE   DFLD  POS=(04,19),LTH=10,PRO
+         DFLD  'UPDATE DATE:',POS=(04,31),PRO
+UPDATE   DFLD  POS=(04,44),LTH=10,PRO
+```
+
 ## Additional type of objects bring by this extension 
 Objects being part of IMS DC Metamodel : IMS Program, IMS Transaction 
 
