@@ -15,18 +15,11 @@ This package has been tested in CAST 8.0.x
 
 ## Source Code Delivery Instructions
 The source code for IMS/DC system definition and MFS maps needs to be delivered with the following file extensions ((warning) note these extensions do not exist on the zOS system but have to be added either during the file transfer or after they have been transferred on the Windows system) :
-IMS/DC Transaction definition (IMS system definition)
-	*.tra	M	
-This file lists one or more APPLCTN macros combined with one or more TRANSACT macros.
-It defines the scheduling and resource requirements for an application program.
-See IBM documentation on how to obtain this file.
-This seems to be "stage 1 of IMS system definition" output.
 
-IMS MFS maps definition	*.mfs	O	
-See IBM documentation on how to obtain these files (1 file per MFS map).
-2 alternative for the source code delivery, when MFS maps are managed in a PDS :
-1° Use IEBPTPCH utility as documented at Partitioned Data Set (PDS), and add .mfs extension to all files, Deliver in DMT as Folder on your local file system.
-2° Use the Mainframe vendor specific extractor to split a PDS dump (use the Cobol program entry for instance) and rename the .cbl extensions to .mfs.
+| Source code type | Required file extensions | Mandatory / Optional | Comments                                         | 
+|------------------|:------------------------:|:--------------------:|------------------------------------------------:|
+|IMS/DC Transaction definition (IMS system definition)  | tra | M | This file lists one or more APPLCTN macros combined with one or more TRANSACT macros. It defines the scheduling and resource requirements for an application program. See IBM documentation on how to obtain this file. This seems to be "stage 1 of IMS system definition" output. | 
+| IMS MFS maps definition | mfs | O | See IBM documentation on how to obtain these files (1 file per MFS map). 2 alternative for the source code delivery, when MFS maps are managed in a PDS : (1) Use IEBPTPCH utility as documented at Partitioned Data Set (PDS), and add .mfs extension to all files, Deliver in DMT as Folder on your local file system. (2) Use the Mainframe vendor specific extractor to split a PDS dump (use the Cobol program entry for instance) and rename the .cbl extensions to .mfs. | 
 
 ## Additional type of objects bring by this extension 
 Objects being part of IMS DC Metamodel : IMS Program, IMS Transaction 
