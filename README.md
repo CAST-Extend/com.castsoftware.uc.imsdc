@@ -4,12 +4,11 @@
 
 # Introduction : 
 
-IMS/DC is an heavy TP transaction monitor. It is not supported by default in AIP (still not supported as of 8.2.0, jan 2017). Here is a custom package aimed to bring minimal support, mostly for transaction identification.
+IMS/DC is an heavy TP transaction monitor. The technical package covers IMS/DC, mostly for transaction identification.
 
 MFS (Message Format Service), MFS is an IMS feature which lets you use Formatted Display Screens. To process a transaction, MFS uses 4 control blocks : DIF (Device Input Format), MOD (Mesg Output Descriptor), MID (Mesg Input Descriptor), DOF (Device Output Format). MFS control statement are often refereed as Format Set (FMT identifies the beginning of a format Set).  
 
-## Roadmap
-This custom package is a field-supported package. It has been used in a limited number of situations.
+This technical package is deliver "as-is". It has been used in a limited number of situations.
 This package is initially based on UA, reference finders, and KB Update. 
 This package has been tested in CAST 8.0.x 
 
