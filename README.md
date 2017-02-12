@@ -103,3 +103,7 @@ The following cases are covered by the extension :
 - in case of IMSDC Transaction + MFS, then MFS is the begin of transaction.
         Ideally, the FMT should be the entry point since it defines the UI.  If not, you might consider to use the MID (Input message, input to... IMS DC)
 	
+
+# How to contribute
+For bugs, feature requests, and contributions contact Thierry Guégan t.guegan@castsoftware.com.
+You may also send a thank you if you find this useful.
